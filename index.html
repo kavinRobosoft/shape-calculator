@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Calculator</title>
+
+    <link rel="stylesheet" href="./style/main.css" >
+    <script src="./script/main.js"></script>
+</head>
+<body>
+    <div id="main">
+    <header>Shape Calculator</header>
+        <div id="container">
+        <div>
+            <p>Welcome to Shape Calculator</p>
+            <p>Google http://domain.comShape CalculatorShape CalculatorShape Calculator is an interactive web application. To the right you will find the 3 step application. Follow the instructions in each step. Clicking cancel will take you back to step 1. Enjoy!</p>
+            
+            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            
+            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas.</p>
+        </div>
+        <div id="box1">
+            <p><b>Step 1 : Select your shape</b></p>
+            <p>Please select the shape that you would like
+                to calculate the area of and press the
+                button "Go to step 2"</p>
+                <ul id="shapeList">
+            <script>
+                dispShapeList()
+            </script>
+            </ul>
+            <button onclick="goToStepTwo()">Go to step 2</button>
+        </div>
+
+        <div id="box2">
+            <p><b>Step 2 : Insert your values</b></p>
+            <p>You have selected a circle, please input
+                the required variables.</p>
+               <p><span id="dim">Diameter</span>:
+                <input id="inputValue1" width="100px" type="text" ></p> 
+                <p id="secondInput">Height:
+                    <input id="inputValue2" width="100px" type="text" ></p> 
+            <button onclick="goToStepThree()">Go to step 3</button>
+            or <a onclick="goToStepOne()">Cancel</a>
+        </div>
+
+        <div id="box3">
+            <p><b>Step 3 : Your results</b></p>
+            <p >You have calculated the area of a circle
+                with a diameter of <span id="dimValue"></span>. Below is your result:</p>
+                <p>The Area is <span id="resultArea"></span>.</p>
+            <button onclick="goToStepOne()">Start Over</button>
+        </div>
+
+        <div >
+            120 x 240 Ad<br />
+            (Vertical Banner)
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById("box1").style.display = "block";
+    document.getElementById("box2").style.display = "none";
+    document.getElementById("box3").style.display = "none";
+    document.getElementById("secondInput").style.display = "none";
+</script>
+</body>
+</html>
